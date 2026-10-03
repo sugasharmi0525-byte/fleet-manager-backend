@@ -1,0 +1,50 @@
+{
+  "name": "server",
+  "version": "1.0.0",
+  "private": true,
+  "main": "server.js",
+  "scripts": {
+    "dev": "nodemon server.js",
+    "start": "node server.js",
+    "db:create-dev": "node scripts/create-dev-db.js",
+    "db:generate-models": "node scripts/generate-models.js",
+    "db:check-models": "node scripts/check-models.js",
+    "db:migrate": "node scripts/migrate.js",
+    "auth:set-password": "node scripts/set-admin-password.js",
+    "auth:check": "node scripts/check-auth.js",
+    "check:crud": "node scripts/check-crud.js",
+    "check:operations": "node scripts/check-operations.js",
+    "check:salaries": "node scripts/check-salaries.js",
+    "check:reports": "node scripts/check-reports.js",
+    "check:subvendor": "node scripts/check-subvendor.js",
+    "check:quotations": "node scripts/check-quotations.js",
+    "check:insights": "node scripts/check-insights.js",
+    "check:all": "npm run check:crud && npm run check:operations && npm run check:salaries && npm run check:reports && npm run check:subvendor && npm run check:quotations && npm run check:insights",
+    "numbers:report": "node scripts/numbers-report.js",
+    "test": "node --test tests/unit.test.js",
+    "db:seed-demo": "node scripts/seed-demo.js"
+  },
+  "dependencies": {
+    "bcrypt": "^6.0.0",
+    "cors": "^2.8.5",
+    "csrf-sync": "^4.2.1",
+    "dotenv": "^16.4.5",
+    "express": "^5.2.1",
+    "express-mysql-session": "^3.0.3",
+    "express-rate-limit": "^8.7.0",
+    "express-session": "^1.18.1",
+    "helmet": "^8.3.0",
+    "isomorphic-dompurify": "^2.16.0",
+    "morgan": "^1.10.0",
+    "multer": "^2.4.0",
+    "mysql2": "^3.24.5",
+    "sequelize": "^6.37.8",
+    "winston": "^3.19.0",
+    "winston-daily-rotate-file": "^5.0.0",
+    "zod": "^4.6.5"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.7",
+    "sequelize-auto": "^0.8.8"
+  }
+}
